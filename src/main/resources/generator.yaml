@@ -1,9 +1,9 @@
 db:
-  url:
-  username:
-  password:
-author: unknown
-packageName:
+  url: jdbc:mysql://localhost:3306/test?verifyServerCertificate=false&useSSL=false&serverTimezone=UTC
+  username: root
+  password: root
+author: dalefe
+packageName: com.greedystar.test
 path:
   controller: controller
   service: service.impl

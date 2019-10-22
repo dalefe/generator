@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.greedystar</groupId>
+    <groupId>com.dalefe</groupId>
     <artifactId>generator</artifactId>
-    <version>1.2.1</version>
+    <version>1.0</version>
 
     <parent>
         <groupId>org.sonatype.oss</groupId>
@@ -23,15 +23,15 @@
     </licenses>
     <scm>
         <tag>master</tag>
-        <url>git@github.com:GreedyStar/generator.git</url>
-        <connection>scm:git:git@github.com:GreedyStar/generator.git</connection>
-        <developerConnection>scm:git:git@github.com:GreedyStar/generator.git</developerConnection>
+        <url>https://github.com/dalefe/generator</url>
+        <connection>git@github.com:dalefe/generator.git</connection>
+        <developerConnection>scm:git:git@github.com:dalefe/generator.git</developerConnection>
     </scm>
     <developers>
         <developer>
-            <name>GreedyStar</name>
-            <email>greedystar@163.com</email>
-            <organization>GreedyStar</organization>
+            <name>dalefe</name>
+            <email>dalefe@qq.com</email>
+            <organization>dalefe</organization>
         </developer>
     </developers>
 
@@ -59,6 +59,19 @@
             <artifactId>snakeyaml</artifactId>
             <version>1.19</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.greedystar</groupId>
+            <artifactId>generator</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.18</version>
+        </dependency>
+
     </dependencies>
 
 </project>
