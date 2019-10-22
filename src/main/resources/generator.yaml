@@ -3,7 +3,7 @@ db:
   username: root
   password: root
 author: dalefe
-packageName: com.greedystar.test
+packageName: com.dalefe.test
 path:
   controller: controller
   service: service.impl

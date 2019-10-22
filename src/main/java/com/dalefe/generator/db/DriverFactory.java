@@ -5,7 +5,7 @@ package com.dalefe.generator.db;
  * Date   2018-10-24
  */
 public class DriverFactory {
-    private final static String DRIVER_MYSQL = "com.mysql.jdbc.Driver";
+    private final static String DRIVER_MYSQL = "com.mysql.cj.jdbc.Driver";
     private final static String DRIVER_ORACLE = "oracle.jdbc.driver.OracleDriver";
     private final static String DRIVER_SQLSERVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 
