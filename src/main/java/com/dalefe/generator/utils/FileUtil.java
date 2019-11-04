@@ -1,10 +1,7 @@
 package com.dalefe.generator.utils;
-
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
-
 import java.io.*;
-
 /**
  * Author GreedyStar
  * Date   2018/4/19

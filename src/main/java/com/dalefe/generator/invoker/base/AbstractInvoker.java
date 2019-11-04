@@ -29,7 +29,7 @@ public abstract class AbstractInvoker implements Invoker {
     protected List<ColumnInfo> parentTableInfos;
     protected ConnectionUtil connectionUtil = new ConnectionUtil();
     protected TaskQueue taskQueue = new TaskQueue();
-    private ExecutorService executorPool = Executors.newFixedThreadPool(6);
+    private ExecutorService executorPool = Executors.newFixedThreadPool(1);
 
     private void initDataSource() throws Exception {
         if (!this.connectionUtil.initConnection()) {
@@ -54,8 +54,10 @@ public abstract class AbstractInvoker implements Invoker {
                     try {
                         task.run();
                     } catch (IOException e) {
+                        System.out.println("异常1");
                         e.printStackTrace();
                     } catch (TemplateException e) {
+                        System.out.println("异常2");
                         e.printStackTrace();
                     }
                 });

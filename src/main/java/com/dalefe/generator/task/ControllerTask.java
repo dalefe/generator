@@ -6,10 +6,7 @@ import com.dalefe.generator.utils.FileUtil;
 import com.dalefe.generator.utils.FreemarketConfigUtils;
 import com.dalefe.generator.utils.StringUtil;
 import freemarker.template.TemplateException;
-
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,14 +32,37 @@ public class ControllerTask extends AbstractTask {
         } else {
             controllerData.put("ServicePackageName", ConfigUtil.getConfiguration().getPath().getInterf());
         }
+
         controllerData.put("EntityPackageName", ConfigUtil.getConfiguration().getPath().getEntity());
         controllerData.put("Author", ConfigUtil.getConfiguration().getAuthor());
-        controllerData.put("Date", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+        try {
+//            controllerData.put("Date", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+
         controllerData.put("ClassName", className);
         controllerData.put("EntityName", StringUtil.firstToLowerCase(className));
-        String filePath = FileUtil.getSourcePath() + StringUtil.package2Path(ConfigUtil.getConfiguration().getPackageName()) + StringUtil.package2Path(ConfigUtil.getConfiguration().getPath().getController());
+        System.out.println("controllerDate构建成功");
+        try {
+//            String filePath = FileUtil.getSourcePath() + StringUtil.package2Path(ConfigUtil.getConfiguration().getPackageName()) + StringUtil.package2Path(ConfigUtil.getConfiguration().getPath().getController());
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+        String filePath = "com.dalefe.test.Controller";
+        System.out.println("构建filePath成功");
         String fileName = className + "Controller.java";
         // 生成Controller文件
-        FileUtil.generateToJava(FreemarketConfigUtils.TYPE_CONTROLLER, controllerData, filePath + fileName);
+        System.out.println(filePath + "." + fileName);
+        FileUtil.getSourcePath();
+        try {
+            FileUtil.generateToJava(FreemarketConfigUtils.TYPE_CONTROLLER, controllerData, filePath + "." + fileName);
+        } catch (Throwable e) {
+            System.out.println("gugiuggu");
+        FileUtil.generateToJava(FreemarketConfigUtils.TYPE_CONTROLLER, controllerData, filePath +"."+ fileName);
+
+        }
+
+        System.out.println(filePath + "." + fileName);
     }
 }
